@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metakids Social Media Content Pagina</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<div id="zoom-overlay" class="zoom-overlay">
+    <img id="zoomed-img" src="" alt="Zoomed Image">
+</div>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" onclick="window.location.href='home.html'">Marc Bakker</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="nav">
+            <a href="homeEn.html#home">Home</a>
+            <a href="homeEn.html#work">My Work</a>
+            <a href="homeEn.html#skills">Skills</a>
+            <a href="homeEn.html#about">About Me</a>
+            <a href="homeEn.html#contact">Contact</a>
+            <a href="metakids.html">Nederlands 🇳🇱</a>
+        </nav>
+    </header>
+
+    <!-- Herbruikbare Content Pagina -->
+    <section id="content-page">
+        <h3>Metakids Social Media</h3>
+
+        <!-- Afbeeldingencarousel -->
+        <div class="image-carousel">
+
+            <div class="carousel-slide"><img src="img/meta-1.jpg" alt="Slide 1"></div>
+            <div class="carousel-slide"><img src="img/meta-2.jpg" alt="Slide 1"></div>
+            <div class="carousel-slide"><img src="img/meta-3.jpg" alt="Slide 1"></div>
+            <div class="carousel-slide"><img src="img/meta-4.jpg" alt="Slide 1"></div>
+
+            <!-- Vimeo Video Slide -->
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-question"></i></div>
+                <h3>Situation</h3>
+                <p>MetaKids, a foundation dedicated to research into metabolic diseases in children, needed simple yet
+                    engaging social media posts to reinforce their message online.
+                </p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-person-walking-arrow-right"></i></i></div>
+                <h3>Process</h3>
+                <p>I worked in Photoshop and Figma to edit photos and adjust the size and contrast. Where necessary, I
+                    created additional illustrations in Illustrator.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-face-smile"></i></div>
+                <h3>Result</h3>
+                <p>The client received well-maintained and consistent posts that conveyed MetaKids' message clearly and
+                    visually appealingly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+        <h2>View more work</h2>
+        <div class="projects">
+
+            <div class="project">
+                <a href="labtimeEn.html">
+                    <img src="img/labtimeThumb.jpg" alt="Labtime">
+                    <div class="project-info">
+                        <h3>Labtime</h3>
+                        <p>Converted an old one-pager into a fully featured multi-page website during my internship at
+                            Key Agency.</p>
+                        <span class="cta">View Project →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="vproEn.html">
+                    <img src="img/meesterproef.png" alt="VPRO Interactieve Infographic">
+                    <div class="project-info">
+                        <h3>VPRO Infographic</h3>
+                        <p>Interactive interface based on the VPRO Tegenlicht video, developed according to VID
+                            principles.</p>
+                        <span class="cta">View Project →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="algosusEn.html">
+                    <img src="img/algosus-1.jpg" alt="Algosus">
+                    <div class="project-info">
+                        <h3>Algosus</h3>
+                        <p>Sustainable website designed during the Visual Interface Design minor, focusing on color,
+                            grid, and composition.</p>
+                        <span class="cta">View Project →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-cards">
+            <!-- Contact Info -->
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-address-card"></i></div>
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> marc.a.bakker01@gmail.com</p>
+                <p><strong>Phonenumber:</strong> +31 6 18773369</p>
+                <p><strong>Adres:</strong> Purmerend, Noord Holland
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Send Me A Message</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:marc.a.bakker01@gmail.com">Mail Me <i class="fa-solid fa-envelopes-bulk"></i></a>
+                    <a href="https://www.linkedin.com/in/marc-bakker-987849373/">LinkedIn <i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Marc Bakker Portfolio
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js" type="module"></script>
+
+
+</body>
+
+</html>

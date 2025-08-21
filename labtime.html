@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labtime Content Pagina</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<div id="zoom-overlay" class="zoom-overlay">
+    <img id="zoomed-img" src="" alt="Zoomed Image">
+</div>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" onclick="window.location.href='home.html'">Marc Bakker</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="nav">
+            <a href="home.html#home">Home</a>
+            <a href="home.html#work">Mijn Werk</a>
+            <a href="home.html#skills">Vaardigheden</a>
+            <a href="home.html#about">Over Mij</a>
+            <a href="home.html#contact">Contact</a>
+            <a href="labtimeEn.html">English 🇬🇧</a>
+        </nav>
+    </header>
+
+    <!-- Herbruikbare Content Pagina -->
+    <section id="content-page">
+        <h3>Labtime</h3>
+
+        <!-- Afbeeldingencarousel -->
+        <div class="image-carousel">
+
+            <div class="carousel-slide"><img src="img/labtime-1.jpg" alt="Slide 1"></div>
+            <div class="carousel-slide"><img src="img/labtime-2.jpg" alt="Slide 1"></div>
+            <div class="carousel-slide"><img src="img/labtime-3.jpg" alt="Slide 1"></div>
+            <div class="carousel-slide"><img src="img/labtime-4.jpg" alt="Slide 1"></div>
+
+            <!-- Vimeo Video Slide -->
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-question"></i></div>
+                <h3>Situatie</h3>
+                <p>Labtime, een interne klant van Key Agency die productiviteitsworkshops aanbiedt voor bedrijven, had
+                    behoefte aan een volledige website in plaats van een enkele onepager.
+                </p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-person-walking-arrow-right"></i></i></div>
+                <h3>Proces</h3>
+                <p>Ik werkte het bestaande materiaal uit naar een compleet siteontwerp. In het begin verliep de
+                    communicatie stroef, maar gaandeweg leerde ik duidelijker aangeven wanneer ik feedback nodig had en
+                    wanneer ik een ontwerp presenteerde.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-face-smile"></i></div>
+                <h3>Resultaat</h3>
+                <p>Het project leverde een volledig uitgewerkt siteontwerp op en waardevolle ervaring in het verbeteren
+                    van mijn communicatie met klanten.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+        <h2>Bekijk meer werk</h2>
+        <div class="projects">
+
+            <div class="project">
+                <a href="vpro.html">
+                    <img src="img/meesterproef.png" alt="VPRO Interactieve Infographic">
+                    <div class="project-info">
+                        <h3>VPRO Infographic</h3>
+                        <p>Interactieve interface gebaseerd op de VPRO Tegenlicht-video, ontwikkeld volgens
+                            VID-principes.</p>
+                        <span class="cta">Bekijk project →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="algosus.html">
+                    <img src="img/algosus-1.jpg" alt="Algosus">
+                    <div class="project-info">
+                        <h3>Algosus</h3>
+                        <p>Duurzame website ontworpen tijdens de Visual Interface Design minor, met focus op kleur, grid
+                            en
+                            compositie.</p>
+                        <span class="cta">Bekijk project →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="skelly.html">
+                    <img src="img/skelly-1.jpg" alt="Sailor Skelly">
+                    <div class="project-info">
+                        <h3>Sailor Skelly</h3>
+                        <p>After Effects animatieproject met een simpele character rigging, leuk en leerzaam experiment.
+                        </p>
+                        <span class="cta">Bekijk project →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-cards">
+            <!-- Contact Info -->
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-address-card"></i></i></div>
+                <h3>Contactgegevens</h3>
+                <p><strong>Email:</strong> marc.a.bakker01@gmail.com</p>
+                <p><strong>Telefoon:</strong> +31 6 18773369</p>
+                <p><strong>Adres:</strong> Purmerend, Noord Holland
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Stuur een bericht</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:marc.a.bakker01@gmail.com">Mail mij <i class="fa-solid fa-envelopes-bulk"></i></a>
+                    <a href="https://www.linkedin.com/in/marc-bakker-987849373/">LinkedIn <i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Marc Bakker Portfolio
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js" type="module"></script>
+
+
+</body>
+
+</html>
