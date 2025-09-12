@@ -1,133 +1,99 @@
-// === Menu Toggle voor mobiel ===
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.menu-toggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('show'); // komt overeen met je CSS
-    });
-}
+  let isOpen = false;
+  let isAnimating = false;
 
-// === Smooth Scroll naar secties ===
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', e => {
-        if (link.getAttribute('href').startsWith("#")) {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    });
-});
+  toggleButton.addEventListener('click', () => {
+    if (isAnimating) return;
 
-// === Projecten Knoppen ===
-document.querySelectorAll('.project .btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-        e.preventDefault();
-        alert('Hier zou je project detailpagina openen.');
-    });
-});
+    isAnimating = true;
 
-// === Scroll Animatie voor secties (fade-in) ===
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    if (!isOpen) {
+      dropdownMenu.classList.add('show', 'animate-in');
+      dropdownMenu.classList.remove('animate-out');
+      isOpen = true;
 
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
-    });
-}, appearOptions);
-
-faders.forEach(fader => appearOnScroll.observe(fader));
-
-// === Typing Effect ===
-const typedText = document.getElementById('typed');
-const texts = ["UI&UX Designen", "Illustreren", "Grafisch Vormgeven", "UX Onderzoeken"];
-let textIndex = 0;
-let charIndex = 0;
-
-function type() {
-    if (charIndex < texts[textIndex].length) {
-        typedText.textContent += texts[textIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 90);
+      setTimeout(() => {
+        isAnimating = false;
+      }, 400); // duur van dropdownIn
     } else {
-        setTimeout(erase, 2500);
+      dropdownMenu.classList.remove('animate-in');
+      dropdownMenu.classList.add('animate-out');
+
+      setTimeout(() => {
+        dropdownMenu.classList.remove('show', 'animate-out');
+        isAnimating = false;
+        isOpen = false;
+      }, 300); // duur van dropdownOut
     }
-}
-function erase() {
-    if (charIndex > 0) {
-        typedText.textContent = texts[textIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, 50);
-    } else {
-        textIndex = (textIndex + 1) % texts.length;
-        setTimeout(type, 500);
+  });
+
+  // Optioneel: sluit menu als je buiten het menu klikt
+  document.addEventListener('click', (e) => {
+    if (
+      isOpen &&
+      !dropdownMenu.contains(e.target) &&
+      !toggleButton.contains(e.target)
+    ) {
+      toggleButton.click();
     }
-}
-if(typedText) type();
-
-// === Carousel ===
-document.addEventListener("DOMContentLoaded", () => {
-    const slides = Array.from(document.querySelectorAll(".image-carousel .carousel-slide"));
-    const prevBtn = document.querySelector(".image-carousel .prev");
-    const nextBtn = document.querySelector(".image-carousel .next");
-    let index = 0;
-
-    const show = (i) => {
-        index = (i + slides.length) % slides.length;
-        slides.forEach((s, idx) => {
-            s.style.display = idx === index ? "block" : "none";
-        });
-    };
-    show(0);
-
-    prevBtn?.addEventListener("click", () => show(index - 1));
-    nextBtn?.addEventListener("click", () => show(index + 1));
-});
-
-// === Zoom functionaliteit ===
-document.addEventListener("DOMContentLoaded", () => {
-    const zoomOverlay = document.getElementById("zoom-overlay");
-    const zoomedImg = document.getElementById("zoomed-img");
-
-    // klik op carousel-afbeelding => open fullscreen
-    document.querySelectorAll(".carousel-slide img").forEach(img => {
-        img.addEventListener("click", () => {
-            zoomedImg.src = img.src;
-            zoomOverlay.style.display = "flex";
-        });
-    });
-
-    // klik ergens op overlay => sluit fullscreen
-    zoomOverlay.addEventListener("click", () => {
-        zoomOverlay.style.display = "none";
-        zoomedImg.src = "";
-    });
+  });
 });
 
 
-// === Taal switchen ===
 
-const toggleBtn = document.getElementById('lang-toggle');
-let currentLang = 'nl';
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".carousel-image");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-function switchLanguage() {
-    currentLang = currentLang === 'nl' ? 'en' : 'nl';
+  let currentIndex = 0;
 
-    document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.dataset.lang === currentLang ? 'inline' : 'none';
-    });
+  function updateCarousel() {
+      images.forEach((img, index) => {
+          img.style.display = index === currentIndex ? "block" : "none";
+      });
 
-    toggleBtn.textContent = currentLang === 'nl' ? 'EN' : 'NL';
-}
+      // Knoppen tonen/verbergen met class
+      if (currentIndex === 0) {
+          prevBtn.classList.add("hidden");
+      } else {
+          prevBtn.classList.remove("hidden");
+      }
 
-// initialiseren
-switchLanguage();
+      if (currentIndex === images.length - 1) {
+          nextBtn.classList.add("hidden");
+      } else {
+          nextBtn.classList.remove("hidden");
+      }
+  }
 
-// Event listener
-toggleBtn.addEventListener('click', switchLanguage);
+  prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+      }
+  });
 
+  nextBtn.addEventListener("click", () => {
+      if (currentIndex < images.length - 1) {
+          currentIndex++;
+          updateCarousel();
+      }
+  });
+
+  updateCarousel();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const afbeelding = document.getElementById("wisselHeader");
+  const bronnen = ["./img/header.png", "./img/header2.png"];
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % bronnen.length;
+    afbeelding.src = bronnen[index];
+  }, 700); // elke 1000 milliseconden = 1 seconde
+});
