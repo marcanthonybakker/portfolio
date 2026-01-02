@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<div id="zoom-overlay" class="zoom-overlay">
+    <img id="zoomed-img" src="" alt="Zoomed Image">
+</div>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" onclick="window.location.href='homeEn.html'">Marc Bakker</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="nav">
+            <a href="homeEn.html#home">Home</a>
+            <a href="homeEn.html#work">My Work</a>
+            <a href="homeEn.html#skills">Skills</a>
+            <a href="homeEn.html#about">About Me</a>
+            <a href="homeEn.html#contact">Contact</a>
+            <a href="productListing.html">Nederlands 🇳🇱</a>
+        </nav>
+    </header>
+
+    <!-- Herbruikbare Content Pagina -->
+    <section id="content-page">
+        <h3>R2B | Productlisting Images</h3>
+
+        <!-- Afbeeldingencarousel -->
+        <div class="image-carousel">
+
+            <div class="carousel-slide"><img src="img/r2b-1.png" alt="Slide 1"></div>
+            <div class="carousel-slide"><img src="img/r2b-2.png" alt="Slide 2"></div>
+            <div class="carousel-slide"><img src="img/r2b-3.png" alt="Slide 3"></div>
+            <div class="carousel-slide"><img src="img/r2b-4.png" alt="Slide 4"></div>
+            <div class="carousel-slide"><img src="img/r2b-5.png" alt="Slide 5"></div>
+            <div class="carousel-slide"><img src="img/r2b-6.png" alt="Slide 6"></div>
+
+            <!-- Vimeo Video Slide -->
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-question"></i></div>
+                <h3>Situation</h3>
+                <p>
+                    At R2BStore, I amd responsible for creating product images of car and bicycle accessories and other
+                    mobility gadgets. The visuals needed to follow a consistent style so that all products fit together
+                    visually and remained recognizable within the brand.
+                </p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-person-walking-arrow-right"></i></i></div>
+                <h3>Process</h3>
+                <p>I created the images using AI, mainly Nanobana, combined with manual editing in Photoshop. Since
+                    AI-generated results are not always immediately usable, I adjusted details, lighting, and
+                    composition to achieve the desired outcome.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon"><i class="fa-solid fa-face-smile"></i></div>
+                <h3>Result</h3>
+                <p>
+                    This process resulted in consistent and professional product images that align with R2B’s visual
+                    identity. Each image required a slightly different approach, providing variety, creative challenge,
+                    and further development of my image-editing skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="contentSkills">
+        <div class="skills-cards">
+            <div class="skills-card">
+                <h3>Skills applied</h3>
+                <div class="skills-list">
+                    <div class="skill"><i class="fas fa-pencil-ruler"></i> Creativity</div>
+                    <div class="skill"><i class="fa-solid fa-people-group"></i> Teamwork</div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <h3>Tools used</h3>
+                <div class="skills-list">
+                    <div class="skill"><i class="fas fa-image"></i> Photoshop</div>
+                    <div class="skill"><i class="fa-solid fa-microchip"></i> A.I. image generation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+        <h2>View more work</h2>
+        <div class="projects">
+
+            <div class="project">
+                <a href="skellyEn.html">
+                    <img src="img/skelly-1.jpg" alt="Sailor Skelly">
+                    <div class="project-info">
+                        <h3>Sailor Skelly</h3>
+                        <p>After Effects animation project with a simple character rigging, a fun and educational
+                            experiment.
+                        </p>
+                        <span class="cta">View Project →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="creatievehoekEn.html">
+                    <img src="img/creatieveThumb.jpg" alt="De Creatieve Hoek Logo's">
+                    <div class="project-info">
+                        <h3>De Creatieve Hoek Logo's</h3>
+                        <p>Two logos designed during my internship at De Creatieve Hoek that I am proud of.</p>
+                        <span class="cta">View Project →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="midoceanEn.html">
+                    <img src="img/midoceanThumb.jpg" alt="Midocean toevoegingen">
+                    <div class="project-info">
+                        <h3>Midocean implementations</h3>
+                        <p>UX improvements and implementations for the B2B product site Midocean during my internship.
+                        </p>
+                        <span class="cta">View Project →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-cards">
+            <!-- Contact Info -->
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fa-solid fa-address-card"></i></div>
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> marc.a.bakker01@gmail.com</p>
+                <p><strong>Phonenumber:</strong> +31 6 18773369</p>
+                <p><strong>Adres:</strong> Purmerend, Noord Holland
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Send Me A Message</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:marc.a.bakker01@gmail.com">Mail Me <i class="fa-solid fa-envelopes-bulk"></i></a>
+                    <a href="https://www.linkedin.com/in/marc-bakker-987849373/">LinkedIn <i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Marc Bakker Portfolio
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js" type="module"></script>
+
+
+</body>
+
+</html>
